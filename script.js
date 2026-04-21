@@ -33,9 +33,9 @@ function calculateMoney() {
         .then(res => res.json())
         .then(data => {
             currentRate = data.rates[two]
-            const result = (amount * currentRate).toFixed(4)
+            const result = (amount * currentRate).toFixed(2)
             inP2.value = inP1.value ? result : ''
-            rateText.innerText = `1 ${one} = ${currentRate.toFixed(4)} ${two}`
+            rateText.innerText = `1 ${one} = ${currentRate.toFixed(2)} ${two}`
         })
         .catch(() => {
             rateText.innerText = 'ไม่สามารถโหลดข้อมูลได้'
