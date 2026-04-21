@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: "Kanit", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #0f0f13;
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(120, 80, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(255, 200, 0, 0.1) 0%, transparent 40%);
+}
+
+#con_ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    gap: 1.2rem;
+}
+
+#_img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 220, 0, 0.5);
+    box-shadow: 0 0 30px rgba(255, 200, 0, 0.2);
+    background: rgba(255,255,255,0.05);
+}
+
+#title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+}
+
+/* Card */
+#con_Exchange {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    padding: 1.8rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 1rem;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+/* Currency box */
+#currencyOneBox,
+#currencyTwoBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1rem;
+    padding: 1.2rem;
+}
+
+#rate_C_one,
+#rate_C_one_label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Dropdown */
+#currencyOne,
+#currencyTwo {
+    appearance: none;
+    background: rgba(255, 220, 0, 0.12);
+    border: 1.5px solid rgba(255, 220, 0, 0.35);
+    border-radius: 0.6rem;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgb(255, 230, 0);
+    cursor: pointer;
+    transition: all 0.25s;
+    outline: none;
+    width: 100%;
+}
+
+#currencyOne:hover,
+#currencyTwo:hover {
+    background: rgba(255, 220, 0, 0.2);
+    border-color: rgba(255, 220, 0, 0.7);
+    box-shadow: 0 0 12px rgba(255, 220, 0, 0.25);
+}
+
+#currencyOne:focus,
+#currencyTwo:focus {
+    border-color: rgb(255, 220, 0);
+    box-shadow: 0 0 0 3px rgba(255, 220, 0, 0.15);
+}
+
+/* Input */
+#amount-one,
+#amount-two {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.6rem;
+    padding: 0.6rem 0.9rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ffffff;
+    width: 100%;
+    transition: all 0.25s;
+    outline: none;
+}
+
+#amount-one:focus {
+    border-color: rgba(255, 220, 0, 0.6);
+    box-shadow: 0 0 0 3px rgba(255, 220, 0, 0.1);
+    background: rgba(255, 255, 255, 0.09);
+}
+
+#amount-two {
+    color: rgba(255, 230, 0, 0.9);
+    cursor: default;
+}
+
+#amount-one::placeholder,
+#amount-two::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 300;
+}
+
+/* Swap center */
+#swapContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 0.6rem;
+    padding: 0 0.2rem;
+}
+
+#rate_C_two {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    white-space: nowrap;
+    max-width: 80px;
+    line-height: 1.4;
+}
+
+#btn {
+    background: rgb(255, 220, 0);
+    border: none;
+    border-radius: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    color: #0f0f13;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(255, 220, 0, 0.3);
+    flex-shrink: 0;
+}
+
+#btn:hover {
+    background: #ffe000;
+    box-shadow: 0 0 24px rgba(255, 220, 0, 0.55);
+    transform: rotate(180deg) scale(1.08);
+}
+
+#btn:active {
+    transform: rotate(180deg) scale(0.95);
+}
